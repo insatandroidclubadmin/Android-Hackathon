@@ -1,4 +1,6 @@
-package com.iac.hackathon;
+package com.iac.hackathon.service;
+
+import com.iac.hackathon.ReadSMSActivity;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
