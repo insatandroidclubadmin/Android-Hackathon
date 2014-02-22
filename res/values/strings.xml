@@ -8,5 +8,8 @@
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
     <string name="title_section3">Section 3</string>
-
+    <string name="title_activity_send_message">SendMessageActivity</string>
+	<string name="phoneNumber">Numero du tel</string>
+	<string name="messageBody">Message</string>
+	<string name="sendButton">Envoyer</string>
 </resources>
