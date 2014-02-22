@@ -1,6 +1,6 @@
 package com.iac.hackathon.domain;
 
-public class Letter {
+public class Letter extends Gesture{
 
 	String name;
 	int image;

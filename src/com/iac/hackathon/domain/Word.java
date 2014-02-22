@@ -1,6 +1,6 @@
 package com.iac.hackathon.domain;
 
-public class Word {
+public class Word extends Gesture{
 
 	String name;
 	int image;
