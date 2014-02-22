@@ -10,23 +10,59 @@
     
     <uses-permission android:name="android.permission.SEND_SMS" />
 
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="com.iac.hackathon.MainActivity"
-            android:label="@string/app_name" >
+         <activity
+            android:name="com.iac.hackathon.SplashActivity"
+            android:label="@string/app_name"
+           >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+             <activity
+            android:name="com.iac.hackathon.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+         <!-- 
+        <activity
+            android:name="com.iac.hackathon.EmergencyCalls"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+-->
         <activity
             android:name="com.iac.hackathon.SendMessageActivity"
             android:label="@string/title_activity_send_message" >
+		</activity>
+        <receiver android:name="com.iac.hackathon.service.SMSReceiver" >
+            <intent-filter android:priority="100" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="com.iac.hackathon.ReadSMSActivity"
+            android:label="@string/title_activity_read_message"
+            android:parentActivityName="com.iac.hackathon.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.iac.hackathon.MainActivity" />
+
         </activity>
     </application>
 
