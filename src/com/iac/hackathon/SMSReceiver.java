@@ -26,9 +26,6 @@ public class SMSReceiver extends BroadcastReceiver {
 					final String phoneNumber = messages[0]
 							.getDisplayOriginatingAddress();
 					
-
-					Toast.makeText(context, "Expediteur : " + phoneNumber,Toast.LENGTH_LONG).show();
-					Toast.makeText(context, "Message : " + messageBody,	Toast.LENGTH_LONG).show();
 					Intent intentRead = new Intent(context, ReadSMSActivity.class);
 					Bundle bundleRead = new Bundle();
 					bundleRead.putString("number", phoneNumber);
