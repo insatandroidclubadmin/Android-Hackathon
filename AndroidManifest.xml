@@ -4,14 +4,13 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    
     <uses-sdk
         android:minSdkVersion="11"
         android:targetSdkVersion="18" />
-    
-    <uses-permission android:name="android.permission.SEND_SMS" />
-
-    <uses-permission android:name="android.permission.RECEIVE_SMS" />
-    <uses-permission android:name="android.permission.READ_SMS" />
 
     <application
         android:allowBackup="true"
@@ -45,10 +44,6 @@
             </intent-filter>
         </activity>
 -->
-        <activity
-            android:name="com.iac.hackathon.SendMessageActivity"
-            android:label="@string/title_activity_send_message" >
-		</activity>
         <receiver android:name="com.iac.hackathon.service.SMSReceiver" >
             <intent-filter android:priority="100" >
                 <action android:name="android.provider.Telephony.SMS_RECEIVED" />
