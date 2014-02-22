@@ -22,7 +22,7 @@ public class Splash extends Activity {
 			@Override
 			public void run() {
 				Splash.this.finish();
-				Intent mainIntent = new Intent(Splash.this, EmergencyCalls.class);
+				Intent mainIntent = new Intent(Splash.this, MainActivity.class);
 				Splash.this.startActivity(mainIntent);
 			}
 		}, SPLASH_DISPLAY_LENGTH);
