@@ -51,8 +51,62 @@ public class MessageManager {
 		letters.add(new Letter("y", R.drawable.letter_y));
 		letters.add(new Letter("z", R.drawable.letter_z));
 		
-		words.add(new Word("Hello", R.drawable.letter_a));
 		words.add(new Word("Fine", R.drawable.letter_a));
+		words.add(new Word("Fine", R.drawable.letter_a));
+		words.add(new Word("Fine", R.drawable.letter_a));
+		words.add(new Word("Fine", R.drawable.letter_a));
+		words.add(new Word("Fine", R.drawable.letter_a));
+		words.add(new Word("Fine", R.drawable.letter_a));
+		words.add(new Word("Fine", R.drawable.letter_a));
+		words.add(new Word("Fine", R.drawable.letter_a));
+		words.add(new Word("Fine", R.drawable.letter_a));
+		words.add(new Word("Fine", R.drawable.letter_a));
+		words.add(new Word("Fine", R.drawable.letter_a));
+		words.add(new Word("Fine", R.drawable.letter_a));
+		words.add(new Word("Fine", R.drawable.letter_a));
+		
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
+		words.add(new Word("Hello", R.drawable.letter_a));
 	}
 
 	public ArrayList<Letter> getLetters() {
@@ -102,9 +156,4 @@ public class MessageManager {
 		
 		return gestures;
 	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 }
