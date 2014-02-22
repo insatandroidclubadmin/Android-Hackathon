@@ -7,6 +7,7 @@ import java.util.LinkedList;
 import java.util.Set;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
@@ -20,6 +21,7 @@ import android.widget.SectionIndexer;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.iac.hackathon.domain.Letter;
 import com.iac.hackathon.domain.Word;
 import com.iac.hackathon.manager.MessageManager;
 
@@ -45,7 +47,11 @@ public class DictionnaryFragment extends ListFragment {
 		for (Word word : manager.getWords()) {
 			wordNames.add(word.getName());
 		}
-
+		for (Letter letter : manager.getLetters()) {
+			wordNames.add(letter.getName());
+		}
+		Collections.sort(wordNames);
+		//TODO: sort alphabetically
 		setListAdapter(new MyListAdapter(getActivity(), wordNames));
 		
 		ListView lv = getListView();
@@ -55,8 +61,11 @@ public class DictionnaryFragment extends ListFragment {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				// When clicked, show a toast with the TextView text
-				Toast.makeText(getActivity(),
-						((TextView) view).getText(), Toast.LENGTH_SHORT).show();
+				Bundle bundle = new Bundle();
+				bundle.putString("gesture", ((TextView) view).getText().toString());
+				Intent intent = new Intent(getActivity(), WordDialogActivity.class);
+				intent.putExtras(bundle);
+				startActivity(intent);
 			}
 		});
 	}

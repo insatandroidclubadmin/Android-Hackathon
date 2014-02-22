@@ -39,7 +39,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity>
         -->
         <receiver android:name="com.iac.hackathon.service.SMSReceiver" >
             <intent-filter android:priority="100" >
@@ -58,6 +58,10 @@
         <activity
             android:name="com.iac.hackathon.AboutActivity"
             android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="com.iac.hackathon.WordDialogActivity"
+            android:theme="@android:style/Theme.Dialog" > >
         </activity>
     </application>
 
