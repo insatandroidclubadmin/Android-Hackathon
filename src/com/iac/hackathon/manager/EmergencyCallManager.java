@@ -7,8 +7,8 @@ import com.iac.hackathon.domain.EmergencyCallCategory;
 
 public class EmergencyCallManager {
 
-	static ArrayList<EmergencyCall> emergencyCalls;
-	static ArrayList<EmergencyCallCategory> categories;
+	ArrayList<EmergencyCall> emergencyCalls;
+	ArrayList<EmergencyCallCategory> categories;
 	
 	
 	
