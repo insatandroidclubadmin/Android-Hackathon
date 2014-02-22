@@ -1,16 +1,15 @@
 package com.iac.hackathon;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+import android.view.MenuItem;
+
 
 public class MainActivity extends FragmentActivity {
 
@@ -28,7 +27,7 @@ public class MainActivity extends FragmentActivity {
 	 * The {@link ViewPager} that will host the section contents.
 	 */
 	ViewPager mViewPager;
-	Fragment emergencyCallFragment;
+	Fragment emergencyCallFragment, sendSMSFragment, dictionaryFragment;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +44,8 @@ public class MainActivity extends FragmentActivity {
 		mViewPager.setAdapter(mSectionsPagerAdapter);
 		
 		emergencyCallFragment = new EmergencyCallFragment();
+		sendSMSFragment = new SendSMSFragment();
+		dictionaryFragment = new DictionnaryFragment();
 
 	}
 
@@ -55,6 +56,20 @@ public class MainActivity extends FragmentActivity {
 		return true;
 	}
 
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle item selection
+	    switch (item.getItemId()) {
+	        case R.id.action_settings:
+	        	
+	            return true;
+	        case R.id.action_about:
+	        	startActivity(new Intent(MainActivity.this, AboutActivity.class));
+	            return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
+	}
 	/**
 	 * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
 	 * one of the sections/tabs/pages.
@@ -71,10 +86,13 @@ public class MainActivity extends FragmentActivity {
 			switch (position) {
 			case 0:
 				fragment= emergencyCallFragment;
+				break;
 			case 1:
-				fragment= new EmergencyCallFragment();
+				fragment= sendSMSFragment;
+				break;
 			case 2:
-				fragment= new EmergencyCallFragment();
+				fragment= dictionaryFragment;
+				break;
 			}
 			return fragment;
 		}
@@ -96,33 +114,6 @@ public class MainActivity extends FragmentActivity {
 				return getString(R.string.title_section3);
 			}
 			return null;
-		}
-	}
-
-	/**
-	 * A dummy fragment representing a section of the app, but that simply
-	 * displays dummy text.
-	 */
-	public static class DummySectionFragment extends Fragment {
-		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		public static final String ARG_SECTION_NUMBER = "section_number";
-
-		public DummySectionFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_main_dummy,
-					container, false);
-			TextView dummyTextView = (TextView) rootView
-					.findViewById(R.id.section_label);
-			dummyTextView.setText(Integer.toString(getArguments().getInt(
-					ARG_SECTION_NUMBER)));
-			return rootView;
 		}
 	}
 
