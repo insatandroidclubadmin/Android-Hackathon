@@ -13,7 +13,7 @@
         android:gravity="center_vertical" >
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/expandable_emergency_call"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"

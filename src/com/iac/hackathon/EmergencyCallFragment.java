@@ -18,10 +18,8 @@ import com.iac.hackathon.utils.MyExpandableAdapter;
 
 public class EmergencyCallFragment extends Fragment implements OnChildClickListener{
 	
-	
-	
-	private ArrayList<String> parentItems = new ArrayList<String>();
-	private ArrayList<Object> childItems = new ArrayList<Object>();
+	private ArrayList<String> parentItems;
+	private ArrayList<Object> childItems;
 	EmergencyCallManager manager = new EmergencyCallManager();
 
 	public EmergencyCallFragment() {
@@ -30,6 +28,8 @@ public class EmergencyCallFragment extends Fragment implements OnChildClickListe
 	@Override
 	public View onCreateView( LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		parentItems = new ArrayList<String>();
+		 childItems = new ArrayList<Object>();
 		View rootView = inflater.inflate(R.layout.fragment_main_emergency_call,
 				container, false);
 		
