@@ -1,7 +1,5 @@
 package com.iac.hackathon.utils;
 
-import com.iac.hackathon.R;
-
 import android.app.Activity;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;

@@ -1,10 +1,8 @@
 package com.iac.hackathon.manager;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import com.iac.hackathon.R;
-import com.iac.hackathon.domain.EmergencyCall;
 import com.iac.hackathon.domain.Gesture;
 import com.iac.hackathon.domain.Letter;
 import com.iac.hackathon.domain.Word;

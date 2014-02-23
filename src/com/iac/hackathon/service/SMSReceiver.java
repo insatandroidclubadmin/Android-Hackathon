@@ -1,13 +1,12 @@
 package com.iac.hackathon.service;
 
-import com.iac.hackathon.ReadSMSActivity;
-
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.SmsMessage;
-import android.widget.Toast;
+
+import com.iac.hackathon.ReadSMSActivity;
 
 public class SMSReceiver extends BroadcastReceiver {
 	private final String ACTION_RECEIVE_SMS = "android.provider.Telephony.SMS_RECEIVED";
