@@ -32,7 +32,7 @@ public class SendSMSFragment extends Fragment {
 		View rootView = inflater.inflate(R.layout.fragment_main_send_sms,
 				container, false);
 		
-		mCustomKeyboard = new MyCustomKeyboard(getActivity(),
+		mCustomKeyboard = new MyCustomKeyboard(getActivity(),rootView,
 				R.id.keyboardview, R.xml.mykbd);
 
 		init(rootView);

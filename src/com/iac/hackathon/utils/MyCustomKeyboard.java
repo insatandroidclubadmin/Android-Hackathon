@@ -24,6 +24,7 @@ public class MyCustomKeyboard {
 	
 	/** A link to the activity that hosts the {@link #mKeyboardView}. */
 	private Activity mHostActivity;
+	private View rootView;
 
 	/** The key (code) handler. */
 	private OnKeyboardActionListener mOnKeyboardActionListener = new OnKeyboardActionListener() {
@@ -113,10 +114,11 @@ public class MyCustomKeyboard {
 	};
 
 	
-	public MyCustomKeyboard(Activity host, int viewid, int layoutid) {
+	public MyCustomKeyboard(Activity host, View rootView, int viewid, int layoutid) {
 		
 		mHostActivity = host;
-		mKeyboardView = (KeyboardView) mHostActivity.findViewById(viewid);
+		this.rootView = rootView;
+		mKeyboardView = (KeyboardView) rootView.findViewById(viewid);
 		mKeyboardView.setKeyboard(new Keyboard(mHostActivity, layoutid));
 		mKeyboardView.setPreviewEnabled(false); // NOTE Do not show the preview
 												// balloons
@@ -159,7 +161,7 @@ public class MyCustomKeyboard {
 	 */
 	public void registerEditText(int resid) {
 		// Find the EditText 'resid'
-		EditText edittext = (EditText) mHostActivity.findViewById(resid);
+		EditText edittext = (EditText) rootView.findViewById(resid);
 		// Make the custom keyboard appear
 		edittext.setOnFocusChangeListener(new OnFocusChangeListener() {
 			// NOTE By setting the on focus listener, we can show the custom
