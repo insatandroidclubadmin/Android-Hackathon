@@ -9,10 +9,13 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.CheckedTextView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.iac.hackathon.R;
+import com.iac.hackathon.manager.EmergencyCallManager;
 
 public class MyExpandableAdapter extends BaseExpandableListAdapter {
 
@@ -20,6 +23,7 @@ public class MyExpandableAdapter extends BaseExpandableListAdapter {
 	private ArrayList<Object> childtems;
 	private LayoutInflater inflater;
 	private ArrayList<String> parentItems, child;
+	private EmergencyCallManager manager = new EmergencyCallManager();
 
 	public MyExpandableAdapter(ArrayList<String> parents,
 			ArrayList<Object> childern) {
@@ -45,7 +49,7 @@ public class MyExpandableAdapter extends BaseExpandableListAdapter {
 			convertView = inflater.inflate(R.layout.expandable_group, null);
 		}
 
-		textView = (TextView) convertView.findViewById(R.id.textView1);
+		textView = (TextView) convertView.findViewById(R.id.expandable_emergency_call);
 		textView.setText(child.get(childPosition));
 
 		convertView.setOnClickListener(new OnClickListener() {
@@ -67,10 +71,13 @@ public class MyExpandableAdapter extends BaseExpandableListAdapter {
 		if (convertView == null) {
 			convertView = inflater.inflate(R.layout.expandable_row, null);
 		}
+		
+		CheckedTextView categoryName = (CheckedTextView)((LinearLayout) convertView).getChildAt(1);
+		categoryName.setText(parentItems.get(groupPosition));
+		categoryName.setChecked(isExpanded);
 
-		((CheckedTextView) convertView).setText(parentItems.get(groupPosition));
-		((CheckedTextView) convertView).setChecked(isExpanded);
-
+		ImageView categoryImage = (ImageView)((LinearLayout) convertView).getChildAt(0);
+		categoryImage.setImageResource(manager.getEmergencyCallCategoryByName(parentItems.get(groupPosition)).getImage());
 		return convertView;
 	}
 
