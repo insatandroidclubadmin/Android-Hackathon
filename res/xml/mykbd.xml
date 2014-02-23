@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyHeight="7.5%p"
+    android:keyWidth="12.50%p" >
+
+    <!--
+    android:horizontalGap="0.50%p"
+    android:verticalGap="0.50%p"
+    
+    NOTE When we add a horizontalGap in pixels, this interferes with keyWidth in percentages adding up to 100%
+    NOTE When we have a horizontalGap (on Keyboard level) of 0, this make the horizontalGap (on Key level) to move from after the key to before the key... (I consider this a bug) 
+    -->
+    <Row>
+        <Key
+            android:codes="49"
+            android:keyEdgeFlags="left"
+            android:keyIcon="@drawable/keyboard_1" />
+        <Key
+            android:codes="50"
+            android:keyIcon="@drawable/keyboard_2" />
+        <Key
+            android:codes="51"
+            android:keyIcon="@drawable/keyboard_3" />
+        <Key
+            android:codes="52"
+            android:keyIcon="@drawable/keyboard_4" />
+        <Key
+            android:codes="53"
+            android:keyIcon="@drawable/keyboard_5" />
+        <Key
+            android:codes="54"
+            android:keyIcon="@drawable/keyboard_6" />
+        <Key
+            android:codes="55"
+            android:keyIcon="@drawable/keyboard_7" />
+        <Key
+            android:codes="56"
+            android:keyIcon="@drawable/keyboard_8" />
+        <Key
+            android:codes="57"
+            android:keyIcon="@drawable/keyboard_9" />
+        <Key
+            android:codes="48"
+            android:keyIcon="@drawable/keyboard_0" />
+        <Key
+            android:codes="55006"
+            android:keyLabel="CLR" />
+    </Row>
+    <Row>
+        <Key
+            android:codes="65"
+            android:keyEdgeFlags="left"
+            android:keyIcon="@drawable/keyboard_a" />
+        <Key
+            android:codes="66"
+            android:keyIcon="@drawable/keyboard_b" />
+        <Key
+            android:codes="67"
+            android:keyIcon="@drawable/keyboard_c" />
+        <Key
+            android:codes="68"
+            android:keyIcon="@drawable/keyboard_d" />
+        <Key
+            android:codes="69"
+            android:keyIcon="@drawable/keyboard_e" />
+        <Key
+            android:codes="70"
+            android:keyIcon="@drawable/keyboard_f" />
+        <Key
+            android:codes="71"
+            android:keyIcon="@drawable/keyboard_g" />
+        <Key
+            android:codes="72"
+            android:keyIcon="@drawable/keyboard_h" />
+        <Key
+            android:codes="73"
+            android:keyIcon="@drawable/keyboard_i" />
+        <Key
+            android:codes="74"
+            android:keyIcon="@drawable/keyboard_j" />
+        <Key
+            android:codes="-5"
+            android:isRepeatable="true"
+            android:keyIcon="@drawable/sym_keyboard_delete" />
+    </Row>
+    <Row>
+        <Key
+            android:codes="75"
+            android:keyEdgeFlags="left"
+            android:keyIcon="@drawable/keyboard_k" />
+        <Key
+            android:codes="76"
+            android:keyIcon="@drawable/keyboard_l" />
+        <Key
+            android:codes="77"
+            android:keyIcon="@drawable/keyboard_m" />
+        <Key
+            android:codes="78"
+            android:keyIcon="@drawable/keyboard_n" />
+        <Key
+            android:codes="79"
+            android:keyIcon="@drawable/keyboard_o" />
+        <Key
+            android:codes="80"
+            android:keyIcon="@drawable/keyboard_p" />
+        <Key
+            android:codes="81"
+            android:keyIcon="@drawable/keyboard_q" />
+        <Key
+            android:codes="82"
+            android:keyIcon="@drawable/keyboard_r" />
+        <Key
+            android:codes="83"
+            android:keyIcon="@drawable/keyboard_s" />
+        <Key
+            android:codes="84"
+            android:keyIcon="@drawable/keyboard_t" />
+        <Key
+            android:codes="-3"
+            android:keyIcon="@drawable/sym_keyboard_done" />
+    </Row>
+    <Row>
+        <Key
+            android:codes="85"
+            android:keyEdgeFlags="left"
+            android:keyIcon="@drawable/keyboard_u" />
+        <Key
+            android:codes="86"
+            android:keyIcon="@drawable/keyboard_v" />
+        <Key
+            android:codes="87"
+            android:keyIcon="@drawable/keyboard_w" />
+        <Key
+            android:codes="88"
+            android:keyIcon="@drawable/keyboard_x" />
+        <Key
+            android:codes="89"
+            android:keyIcon="@drawable/keyboard_y" />
+        <Key
+            android:codes="90"
+            android:keyIcon="@drawable/keyboard_z" />
+        <Key
+            android:codes="32"
+            android:keyLabel="___"
+            android:keyWidth="25%p" />
+        <Key
+            android:codes="55002"
+            android:isRepeatable="true"
+            android:keyIcon="@drawable/sym_keyboard_left" />
+        <Key
+            android:codes="55003"
+            android:isRepeatable="true"
+            android:keyIcon="@drawable/sym_keyboard_right" />
+    </Row>
+
+</Keyboard>

@@ -18,7 +18,7 @@ public class SendSMSFragment extends Fragment {
 	EditText messageBodyField;
 	String messageBody;
 	Button sendButton;
-	
+
 	public SendSMSFragment() {
 	}
 
@@ -63,6 +63,38 @@ public class SendSMSFragment extends Fragment {
 		phoneNumberField = (EditText) rootView.findViewById(R.id.phoneNumberField);
 		messageBodyField = (EditText) rootView.findViewById(R.id.messageBodyField);
 		sendButton = (Button) rootView.findViewById(R.id.sendButton);
+		
 	}
 
 }
+
+
+/*
+
+
+	MyCustomKeyboard mCustomKeyboard;
+
+
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+	super.onCreate(savedInstanceState);
+	setContentView(R.layout.activity_main);
+
+	mCustomKeyboard = new MyCustomKeyboard(this, R.id.keyboardview,
+			R.xml.mykbd);
+
+	mCustomKeyboard.registerEditText(R.id.phoneNumberField);
+	mCustomKeyboard.registerEditText(R.id.messageBodyField);
+}
+
+@Override
+public void onBackPressed() {
+	// NOTE Trap the back key: when the CustomKeyboard is still visible hide
+	// it, only when it is invisible, finish activity
+	if (mCustomKeyboard.isCustomKeyboardVisible())
+		mCustomKeyboard.hideCustomKeyboard();
+	else
+		this.finish();
+}
+
+*/
