@@ -146,11 +146,11 @@
         <Key
             android:codes="55002"
             android:isRepeatable="true"
-            android:keyIcon="@drawable/keyboard_forward" />
+            android:keyIcon="@drawable/keyboard_back" />
         <Key
             android:codes="55003"
             android:isRepeatable="true"
-            android:keyIcon="@drawable/keyboard_back" />
+            android:keyIcon="@drawable/keyboard_forward" />
     </Row>
 
 </Keyboard>

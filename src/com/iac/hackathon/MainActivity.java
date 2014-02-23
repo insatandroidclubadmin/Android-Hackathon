@@ -60,9 +60,6 @@ public class MainActivity extends FragmentActivity {
 	public boolean onOptionsItemSelected(MenuItem item) {
 	    // Handle item selection
 	    switch (item.getItemId()) {
-	        case R.id.action_settings:
-	        	
-	            return true;
 	        case R.id.action_about:
 	        	startActivity(new Intent(MainActivity.this, AboutActivity.class));
 	            return true;
