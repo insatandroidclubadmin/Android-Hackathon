@@ -1,14 +1,11 @@
 package com.iac.hackathon;
 
-import com.iac.hackathon.domain.Gesture;
-import com.iac.hackathon.domain.Word;
-import com.iac.hackathon.manager.MessageManager;
-
-import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
-import android.view.Window;
+import android.os.Bundle;
 import android.widget.ImageView;
+
+import com.iac.hackathon.domain.Gesture;
+import com.iac.hackathon.manager.MessageManager;
 
 public class WordDialogActivity extends Activity {
 

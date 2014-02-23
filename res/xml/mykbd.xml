@@ -44,7 +44,7 @@
             android:keyIcon="@drawable/keyboard_0" />
         <Key
             android:codes="55006"
-            android:keyLabel="CLR" />
+            android:keyIcon="@drawable/keyboard_cancel" />
     </Row>
     <Row>
         <Key
@@ -81,7 +81,7 @@
         <Key
             android:codes="-5"
             android:isRepeatable="true"
-            android:keyIcon="@drawable/sym_keyboard_delete" />
+            android:keyIcon="@drawable/keyboard_backspace" />
     </Row>
     <Row>
         <Key
@@ -117,7 +117,7 @@
             android:keyIcon="@drawable/keyboard_t" />
         <Key
             android:codes="-3"
-            android:keyIcon="@drawable/sym_keyboard_done" />
+            android:keyIcon="@drawable/keyboard_expand" />
     </Row>
     <Row>
         <Key
@@ -146,11 +146,11 @@
         <Key
             android:codes="55002"
             android:isRepeatable="true"
-            android:keyIcon="@drawable/sym_keyboard_left" />
+            android:keyIcon="@drawable/keyboard_forward" />
         <Key
             android:codes="55003"
             android:isRepeatable="true"
-            android:keyIcon="@drawable/sym_keyboard_right" />
+            android:keyIcon="@drawable/keyboard_back" />
     </Row>
 
 </Keyboard>

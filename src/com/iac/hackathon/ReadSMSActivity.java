@@ -59,10 +59,10 @@ public class ReadSMSActivity extends Activity {
 			public void onClick(View v) {
 				if (paused) {
 					paused= false;
-					controlPlayer.setImageResource(R.drawable.ic_media_pause);
+					controlPlayer.setImageResource(R.drawable.pause);
 				} else {
 					paused=true;
-					controlPlayer.setImageResource(R.drawable.ic_media_play);
+					controlPlayer.setImageResource(R.drawable.play);
 				}
 			}
 		});
