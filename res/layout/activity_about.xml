@@ -2,89 +2,112 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".AboutActivity" >
-    
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:padding="10dp" >
 
-    <TextView
-        android:id="@+id/about_app_name"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/about_app_logo"
-        android:layout_marginLeft="17dp"
-        android:layout_toRightOf="@+id/about_app_logo"
-        android:text="@string/app_name"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/about_app_version"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/about_app_name"
-        android:layout_below="@+id/about_app_name"
-        android:text="@string/app_version"
-        android:textAppearance="?android:attr/textAppearance" />
-
-    <ImageView
-        android:id="@+id/about_app_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="37dp"
-        android:layout_marginTop="28dp"
-        android:src="@drawable/ic_launcher" />
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp" >
 
-    <TextView
-        android:id="@+id/about_club"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/about_iac_logo"
-        android:layout_alignRight="@+id/about_app_year"
-        android:text="@string/club_name" />
+        <ImageView
+            android:id="@+id/about_app_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher" />
 
-    <TextView
-        android:id="@+id/about_website"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/about_club"
-        android:layout_below="@+id/about_club"
-        android:paddingLeft="5dp"
-        android:text="@string/club_website" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/about_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="17dp"
+                android:text="@string/app_name"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/about_app_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/app_version"
+                android:textAppearance="?android:attr/textAppearance" />
+        </LinearLayout>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/about_developers"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/about_website"
-        android:layout_below="@+id/about_website"
-        android:layout_marginTop="44dp"
-        android:paddingLeft="5dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="5dp"
+        android:gravity="center"
         android:text="@string/app_developers" />
 
-    <ImageView
-        android:id="@+id/about_iac_logo"
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/about_app_logo"
-        android:layout_marginRight="35dp"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/logo_iac" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:orientation="horizontal" >
 
-    <TextView
-        android:id="@+id/about_app_year"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/about_iac_logo"
-        android:layout_marginRight="30dp"
-        android:layout_toLeftOf="@+id/about_iac_logo"
-        android:text="@string/app_year" />
-    
-    </RelativeLayout>
-    
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/about_club"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/club_name" />
+
+            <TextView
+                android:id="@+id/about_website"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="5dp"
+                android:text="@string/club_website" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/about_iac_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:src="@drawable/logo_iac" />
+
+            <TextView
+                android:id="@+id/about_app_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/app_year" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>
