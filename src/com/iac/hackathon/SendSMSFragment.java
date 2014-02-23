@@ -55,7 +55,9 @@ public class SendSMSFragment extends Fragment {
 						SmsManager smsManager = SmsManager.getDefault();
 						smsManager.sendTextMessage(phoneNumber, null,
 								messageBody, null, null);
-
+						
+						phoneNumberField.setText("");
+						messageBodyField.setText("");
 						Toast.makeText(getActivity(), "SMS Sent!",
 								Toast.LENGTH_LONG).show();
 					} catch (Exception e) {
@@ -65,6 +67,8 @@ public class SendSMSFragment extends Fragment {
 						e.printStackTrace();
 					}
 
+				}else{
+					phoneNumberField.setError("Send to ?");
 				}
 			}
 		});

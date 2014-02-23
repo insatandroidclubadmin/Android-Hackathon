@@ -2,6 +2,7 @@ package com.iac.hackathon.manager;
 
 import java.util.ArrayList;
 
+import com.iac.hackathon.R;
 import com.iac.hackathon.domain.EmergencyCall;
 import com.iac.hackathon.domain.EmergencyCallCategory;
 
@@ -22,9 +23,9 @@ public class EmergencyCallManager {
 
 
 	private void init() {
-		EmergencyCallCategory police = new EmergencyCallCategory("Police", 197,0);
-		EmergencyCallCategory firemen = new EmergencyCallCategory("Firemen", 198,0);
-		EmergencyCallCategory ambulance = new EmergencyCallCategory("Ambulance",190, 0); ///change image
+		EmergencyCallCategory police = new EmergencyCallCategory("Police",R.drawable.call_police, 197);
+		EmergencyCallCategory firemen = new EmergencyCallCategory("Firemen",R.drawable.call_fireman, 198);
+		EmergencyCallCategory ambulance = new EmergencyCallCategory("Ambulance", R.drawable.call_doctor,190); ///change image
 		
 		EmergencyCall thief = new EmergencyCall("Thief", 0, police);
 		EmergencyCall accident = new EmergencyCall("Accident", 0, police);
