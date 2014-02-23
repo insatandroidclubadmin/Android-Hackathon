@@ -38,11 +38,27 @@ public class EmergencyCallManager {
 		categories.add(firemen);
 		categories.add(ambulance);
 		
+		ArrayList<EmergencyCall> policeCalls = new ArrayList<EmergencyCall>();
+		policeCalls.add(thief);
+		policeCalls.add(accident);
+		police.setEmergencyCalls(policeCalls);
+		
+		ArrayList<EmergencyCall> firemenCalls = new ArrayList<EmergencyCall>();
+		firemenCalls.add(fire);
+		firemen.setEmergencyCalls(firemenCalls);
+		
+		ArrayList<EmergencyCall> ambulanceCalls = new ArrayList<EmergencyCall>();
+		ambulanceCalls.add(complication);
+		ambulanceCalls.add(accidentAmbulance);
+		ambulance.setEmergencyCalls(ambulanceCalls);
+		
 		emergencyCalls.add(thief);
 		emergencyCalls.add(accident);
 		emergencyCalls.add(fire);
 		emergencyCalls.add(complication);
 		emergencyCalls.add(accidentAmbulance);
+		
+		
 		
 	}
 
@@ -72,10 +88,6 @@ public class EmergencyCallManager {
 			}
 		}
 		return null;  //exception
-	}
-	
-	public static void main(String[] args) {
-//		System.out.println(getEmergencyCallByName("Police"));
 	}
 
 }
