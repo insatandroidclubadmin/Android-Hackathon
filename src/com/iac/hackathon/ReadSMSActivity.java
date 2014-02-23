@@ -2,18 +2,18 @@ package com.iac.hackathon;
 
 import java.util.ArrayList;
 
-import com.iac.hackathon.domain.Gesture;
-import com.iac.hackathon.manager.MessageManager;
-
+import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
-import android.app.Activity;
-import android.view.Menu;
+import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.support.v4.app.NavUtils;
+
+import com.iac.hackathon.domain.Gesture;
+import com.iac.hackathon.manager.MessageManager;
 
 public class ReadSMSActivity extends Activity {
 
@@ -24,7 +24,8 @@ public class ReadSMSActivity extends Activity {
 	Handler handler = new Handler();
 	
 	TextView phoneView, messageView, gestureNameView;
-	ImageView gestureImage ; 
+	ImageView gestureImage, controlPlayer ; 
+	boolean paused=true;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -51,15 +52,34 @@ public class ReadSMSActivity extends Activity {
 		messageView = (TextView)findViewById(R.id.message);
 		gestureNameView = (TextView)findViewById(R.id.gesture_name);
 		gestureImage = (ImageView)findViewById(R.id.gesture_image);
+		controlPlayer = (ImageView) findViewById(R.id.player_control);
+		controlPlayer.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				if (paused) {
+					paused= false;
+					controlPlayer.setImageResource(R.drawable.ic_media_pause);
+				} else {
+					paused=true;
+					controlPlayer.setImageResource(R.drawable.ic_media_play);
+				}
+			}
+		});
 	}
 
 	private void updateGestureImage() {
 		if(currentGesturePosition<gestures.size()){
-			Gesture currentGesture = gestures.get(currentGesturePosition);
-			currentGesturePosition++;
-			gestureImage.setImageResource(currentGesture.getImage());
-			gestureNameView.setText(currentGesture.getName());
+			if(!paused){
+				Gesture currentGesture = gestures.get(currentGesturePosition);
+				currentGesturePosition++;
+				gestureImage.setImageResource(currentGesture.getImage());
+				gestureNameView.setText(currentGesture.getName());
+			}
 			handler.postDelayed(updateRunnable, 1000);
+		}else{
+			currentGesturePosition=0;
+			controlPlayer.setImageResource(R.drawable.ic_media_play);
 		}
 	}
 	Runnable updateRunnable = new Runnable() {
