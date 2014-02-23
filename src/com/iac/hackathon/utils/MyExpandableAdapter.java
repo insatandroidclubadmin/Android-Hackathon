@@ -56,7 +56,10 @@ public class MyExpandableAdapter extends BaseExpandableListAdapter {
 
 			@Override
 			public void onClick(View view) {
-				Toast.makeText(activity, child.get(childPosition),
+				Toast.makeText(activity, "Waiting for GPS location",
+						Toast.LENGTH_SHORT).show();
+				
+				Toast.makeText(activity, "SMS sent",
 						Toast.LENGTH_SHORT).show();
 			}
 		});
