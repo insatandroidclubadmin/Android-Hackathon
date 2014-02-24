@@ -34,9 +34,17 @@ public class ReadSMSActivity extends Activity {
 		// Show the Up button in the action bar.
 		setupActionBar();
 		
+		String number;
+		String message;
 		Bundle bundle = getIntent().getExtras();
-		String number = bundle.getString("number");
-		String message = bundle.getString("message");
+		if(bundle == null){		//Test case
+			number = "55 263 489";
+			message = "Hello everyone. This app is fun !";
+		}else{
+			number = bundle.getString("number");
+			message = bundle.getString("message");
+		}
+		
 		
 		findViewsById();
 		
@@ -76,11 +84,12 @@ public class ReadSMSActivity extends Activity {
 				gestureImage.setImageResource(currentGesture.getImage());
 				gestureNameView.setText(currentGesture.getName());
 			}
-			handler.postDelayed(updateRunnable, 1000);
 		}else{
 			currentGesturePosition=0;
-			controlPlayer.setImageResource(R.drawable.ic_media_play);
+			paused=true;
+			controlPlayer.setImageResource(R.drawable.play);
 		}
+		handler.postDelayed(updateRunnable, 1000);
 	}
 	Runnable updateRunnable = new Runnable() {
 		@Override

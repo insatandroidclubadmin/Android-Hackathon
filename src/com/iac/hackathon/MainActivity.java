@@ -63,6 +63,9 @@ public class MainActivity extends FragmentActivity {
 	        case R.id.action_about:
 	        	startActivity(new Intent(MainActivity.this, AboutActivity.class));
 	            return true;
+	        case R.id.action_read_sms:
+	        	startActivity(new Intent(MainActivity.this, ReadSMSActivity.class));
+	            return true;
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
